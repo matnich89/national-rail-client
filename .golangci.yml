@@ -1,0 +1,75 @@
+run:
+  concurrency: 4
+  deadline: 1m
+  issues-exit-code: 1
+  tests: true
+  skip-dirs:
+    - pkg/sms/mocks
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  gofmt:
+    simplify: true
+  goimports:
+    local-prefixes: github.com/org/project
+  gocyclo:
+    min-complexity: 10
+  dupl:
+    threshold: 100
+  goconst:
+    min-len: 3
+    min-occurrences: 3
+  lll:
+    line-length: 160
+    tab-width: 1
+  nakedret:
+    max-func-lines: 30
+  govet:
+    check-shadowing: true
+  maligned:
+    suggest-new: true
+
+linters:
+  enable-all: false
+  enable:
+    - errcheck
+    - gofmt
+    - goimports
+    - gocyclo
+    - maligned
+    - dupl
+    - goconst
+    - lll
+    - nakedret
+    - govet
+    - makezero
+    - revive
+  fast: false
+
+issues:
+  exclude-rules:
+    - path: "nationalrail/client.go"
+      linters:
+        - dupl
+    - path: "nationalrail/stations.go"
+      linters:
+        - dupl
+    - path: "nationalrail/mapper.go"
+      linters:
+        - gocyclo
+    - path: "nationalrail/soap/decoder.go"
+      linters:
+        - gocyclo
+    - path: "nationalrail/soap/models.go"
+      linters:
+        - lll
+    - path: _test\.go
+      linters:
+        - lll
+        - dupl
