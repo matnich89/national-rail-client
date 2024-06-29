@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	nr "github.com/matnich89/go-national-rail-client/nationalrail"
+	nr "github.com/matnich89/national-rail-client/nationalrail"
 )
 
 const testAccessToken = "93f1cb45-b961-4906-bd89-f0158053e696"

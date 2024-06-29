@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/matnich89/go-national-rail-client/nationalrail/soap"
+	"github.com/matnich89/national-rail-client/nationalrail/soap"
 )
 
 func MapGetArrBoardWithDetailsResponse(resp []byte) (*StationBoard, error) {

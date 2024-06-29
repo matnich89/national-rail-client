@@ -1,4 +1,4 @@
-module github.com/matnich89/go-national-rail-client
+module github.com/matnich89/national-rail-client
 
 go 1.21
 
