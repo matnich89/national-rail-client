@@ -198,10 +198,10 @@ type GetServiceDetailsResult struct {
 	Etd                     *string                 `xml:"etd"`
 	Atd                     *string                 `xml:"atd"`
 	Length                  int                     `xml:"length"`
-	Platform                int                     `xml:"platform"`
-	IsCancelled             bool                    `xml:"isCancelled"`
-	DetachFront             bool                    `xml:"detachFront"`
-	IsReverseFormation      bool                    `xml:"isReverseFormation"`
+	//Platform                int                     `xml:"platform"`
+	IsCancelled        bool `xml:"isCancelled"`
+	DetachFront        bool `xml:"detachFront"`
+	IsReverseFormation bool `xml:"isReverseFormation"`
 }
 
 type Departures struct {
@@ -275,7 +275,7 @@ type Service struct {
 	Std                     *string                  `xml:"std"`
 	Etd                     *string                  `xml:"etd"`
 	Length                  int                      `xml:"length"`
-	Platform                int                      `xml:"platform"`
+	//Platform                int                      `xml:"platform"`
 }
 
 type Toilet struct {
