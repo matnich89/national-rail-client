@@ -70,7 +70,7 @@ type Service struct {
 	EstimatedTimeOfDeparture *string `json:"estimated_time_of_departure"`
 	DelayReason              *string `json:"delay_reason"`
 	Length                   int     `json:"length"`
-	Platform                 int     `json:"platform"`
+	//Platform                 int     `json:"platform"`
 }
 
 type ServiceDetails struct {
@@ -106,10 +106,10 @@ type ServiceDetails struct {
 	// and EstimatedTimeOfDeparture is not present.
 	ActualTimeOfDeparture *string `json:"actual_time_of_departure"`
 	Length                int     `json:"length"`
-	Platform              int     `json:"platform"`
-	IsCancelled           bool    `json:"is_cancelled"`
-	DetachFront           bool    `json:"detach_front"`
-	IsReverseFormation    bool    `json:"is_reverse_formation"`
+	//Platform              int     `json:"platform"`
+	IsCancelled        bool `json:"is_cancelled"`
+	DetachFront        bool `json:"detach_front"`
+	IsReverseFormation bool `json:"is_reverse_formation"`
 }
 
 type Location struct {
