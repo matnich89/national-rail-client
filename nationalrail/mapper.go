@@ -199,7 +199,7 @@ func mapService(s *soap.Service) *Service {
 			Code: s.OperatorCode,
 			Name: s.Operator,
 		},
-		Platform:        s.Platform,
+		//Platform:        s.Platform,
 		RetailServiceID: s.Rsid,
 		Formation: Formation{
 			Coaches: mapCoaches(s.Formation.Coaches.Coach),
@@ -368,7 +368,7 @@ func mapServiceDetails(s *soap.GetServiceDetailsResult) (*ServiceDetails, error)
 			Code: s.OperatorCode,
 			Name: s.Operator,
 		},
-		Platform:                 s.Platform,
+		//	Platform:                 s.Platform,
 		Type:                     s.ServiceType,
 		ScheduledTimeOfArrival:   s.Sta,
 		EstimatedTimeOfArrival:   s.Eta,
